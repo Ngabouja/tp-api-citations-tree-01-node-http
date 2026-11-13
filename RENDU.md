@@ -1,22 +1,24 @@
-RENDU
-GET /citations
+# Rendu
 
-Statut : 200 OK
+### `GET /citations`
 
-Contenu : Tableau de citations en JSON.
+- **Statut :** `200 OK`
+- **Contenu :** Tableau de citations au format JSON.
+- **Content-Type :** `application/json`
 
-Content-Type : application/json
+### `GET /inconnue`
 
-GET /inconnue
+- **Statut :** `404 Not Found`
+- **Contenu :** Message d'erreur « Route introuvable » au format JSON.
 
-Statut : 404 Not Found
+---
 
-Contenu : Route introuvable en JSON.
+### Rôle de `req` et `res`
 
-Rôle de req et res
-req : contient les informations de la requête du client.
-res : permet au serveur d'envoyer une réponse au client.
-Content-Type
-/ping : text/plain → texte brut.
-/citations : application/json → format JSON.
-    
+- **`req` (Request) :** Contient toutes les informations de la requête envoyée par le client.
+- **`res` (Response) :** Permet au serveur de construire et d'envoyer une réponse au client.
+
+### Gestion du `Content-Type`
+
+- **`/ping` :** `text/plain` (texte brut)
+- **`/citations` :** `application/json` (format JSON)
